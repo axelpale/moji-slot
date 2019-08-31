@@ -1,0 +1,31 @@
+{
+  "name": "moji-slot",
+  "version": "0.0.0",
+  "description": "Example app",
+  "main": "app.js",
+  "scripts": {
+    "build": "webpack",
+    "deploy": "rsync --recursive . xeli@xeli.webfactional.com:~/webapps/demos/mojislot/0",
+    "start": "nodemon --watch src --watch ../../local_modules --exec 'npm run build'",
+    "test": "standard 'src/**/*.js' && echo OK"
+  },
+  "author": {
+    "name": "Akseli Palen",
+    "email": "akseli.palen@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/taataa/tapspace.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "*",
+    "standard": "*",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "ejs-loader": "^0.3.3"
+  },
+  "dependencies": {
+    "deep-equal": "^1.1.0"
+  }
+}
